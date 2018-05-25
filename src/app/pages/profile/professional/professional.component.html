@@ -1,0 +1,40 @@
+<div flex class="view">
+    <div>
+        <div class="professional-experience-summary grey darken-2">
+            <div style="margin-left: 50px;">
+                <div class="col-sm-4 white-text text-center" style="">
+                    <h1 class="title-text">{{'Professional Experience' | uppercase}}</h1>
+                </div>
+                <div class="col-sm-10 white-text body-text" style="margin-top: 38px;">
+                    {{professional.summary}}
+                </div>
+            </div>
+        </div>
+        <div class="professional-experience-picture" [ngStyle]="{'background-image': 'url(../assets/images/' + professional.picture + ')'}">
+        </div>
+    </div>
+    <div class="row" style="margin-left: 20px; margin-top: 33px;">
+        <div class="col-sm-12">
+            <h1 class="title-text" style="color: #616161; margin-top: 33px; margin-bottom: 33px;">Positions</h1>
+        </div>
+        <div class="col-sm-12" *ngFor="let position of professional.positions" style="padding-bottom: 20px;">
+            <h5 class="subtitle-text deep-orange-text">{{position.fromDate | date: 'yyyy'}} - {{position.toDate | date: 'yyyy'}} - {{position.title}} – {{position.companyName}} – {{position.city}} {{position.state}}, {{position.country}}</h5>
+            <h6 class="body-text grey-text">{{position.summary}}</h6>
+        </div>
+    </div>
+    <div>
+        <div class="education-picture" [ngStyle]="{'background-image': 'url(../assets/images/' + education.picture + ')'}">
+        </div>
+        <div class="education-summary grey darken-3" style="padding-top: 79px;">
+            <div class="education-summary-inner">
+                <div class="col-sm-4 white-text" style="padding-bottom: 39px;">
+                    <h1 class="title-text">{{'EDUCATION' | uppercase}}</h1>
+                </div>
+                <div class="col-sm-8 white-text" *ngFor="let education of education.educationAchievements">
+                    <p class="body-text" style="margin-bottom: 0px">{{education.achievementName | uppercase}}</p>
+                    <p class="body-text grey-text" style="font-size: 14px;">{{education.institutionName | uppercase}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

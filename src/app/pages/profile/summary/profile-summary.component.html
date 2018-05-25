@@ -1,0 +1,30 @@
+<!-- Main -->
+<div class="view" flex [ngStyle]="{'background-image': 'url(../assets/images/' + profileSummary.picture + ')', 'background-repeat': 'no-repeat', 'background-position-x': 'center', 'background-position-y': 'center', 'background-size': 'cover'}"
+    [ngStyle.xs]="{'background-image': 'url(../assets/images/'+ profileSummary.pictureXs + ')', 'background-repeat': 'no-repeat', 'background-position': 'right top', 'background-size': 'cover'}">
+    <div class="full-bg-img">
+        <div class="mask rgba-black-strong flex-center" [ngStyle]="{'width': '30%'}" [fxHide.xs]="true">
+            <div class="container text-center white-text">
+                <h1 class="title-text" style="text-transform: uppercase;">{{profileSummary.firstName}} {{profileSummary.lastName}}</h1>
+                <p class="body-text summary-description">{{profileSummary.description}}</p>
+                <br>
+                <p class="body-text summary-legend">{{profileSummary.legend}}</p>
+                <a  [routerLink]="['resume']" class="btn btn-blue-grey waves-light" mdbWavesEffect>Professional</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.Main -->
+<!--Main Layout-->
+<main class="text-center py-5" [fxShow.xs]="true" [fxHide]="true">
+    <div class="full-bg-img">
+        <div class="flex-center">
+            <div class="container text-center grey-text">
+                <h1>{{profileSummary.firstName}} {{profileSummary.lastName}}</h1>
+                <h5>{{profileSummary.description}}</h5>
+                <br>
+                <p>{{profileSummary.legend}}</p>
+            </div>
+        </div>
+    </div>
+</main>
+<!--Main Layout-->

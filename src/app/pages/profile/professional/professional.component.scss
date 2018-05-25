@@ -1,0 +1,81 @@
+.view {
+    /*background: url("http://abregos.com/images/probrand1b.jpg?crc=498546489")no-repeat center center;*/
+    background-size: cover;
+    
+}
+
+.logo {
+    /*background-image: url('../assets/images/-2-logo_poster_.png')*/
+}
+
+.professional-experience-summary {
+    padding-top: 150px;
+    width: 50%;
+    position: relative;
+    height: 800px;
+    float: left;
+}
+
+.professional-experience-picture {
+    background-repeat: no-repeat;
+    background-position: 0% 50%;
+    background-size: cover;
+    height: 800px;
+    position: relative;
+    /* margin-right: -1000px; */
+    width: 50%;
+    left: 50%;
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-position-y: center;
+    background-size: cover;
+    height: 800px;
+}
+
+.education-summary {
+    padding-top: 200px;
+    width: 50%;
+    position: relative;
+    height: 800px;
+    float: right;
+}
+
+.education-picture {
+    background-repeat: no-repeat;
+    background-position: 0% 50%;
+    background-size: cover;
+    height: 800px;
+    position: relative;
+    /* margin-right: -1000px; */
+    width: 50%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: cover;
+    height: 800px;
+    float: left;
+}
+
+.education-summary-inner {
+    padding-left: 150px;
+}
+
+@media (max-width: 1024px){
+    .professional-experience-picture {
+        left: unset;
+        width: 100%;
+    }
+
+    .education-picture {
+        left: unset;
+        width: 100%;
+    }
+
+    .education-summary {
+        width: 100%;
+    }
+
+    .education-summary-inner {
+        padding-left: 75px;
+    }
+}
