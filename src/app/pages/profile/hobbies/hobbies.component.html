@@ -1,7 +1,7 @@
 <div class="view">
     <div *ngFor="let hobby of hobbies">
         <div class="hobby-main-pic" >
-            <img [src]="'../assets/images/' + hobby.picture" class="img-fluid">
+            <img [src]="'http://abregos.com/images/' + hobby.picture" class="img-fluid">
         </div>
         <div class="row" style="margin: 35px;">
             <h1 class="title-text deep-orange-text" style="font-style: italic;" [innerHTML]="hobby.summary"></h1>

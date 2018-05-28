@@ -3,25 +3,29 @@ import { HomeComponent } from './pages/home/home.component';
 import { ProfileSummaryComponent } from './pages/profile/summary/profile-summary.component';
 import { ProfessionalComponent } from './pages/profile/professional/professional.component';
 import { HobbiesComponent } from './pages/profile/hobbies/hobbies.component';
+import { OktaCallbackComponent } from '@okta/okta-angular';
 
 const routes: Routes = [{
-    path: 'home', 
+    path: 'home',
     component: HomeComponent
 }, {
-    path: 'profile', 
+    path: 'profile',
     children: [{
-        path: ':id', 
-        component: ProfileSummaryComponent, 
-    }], 
+        path: ':id',
+        component: ProfileSummaryComponent,
+    }],
 }, {
-    path: 'profile/:id/resume', 
-    component: ProfessionalComponent, 
+    path: 'profile/:id/resume',
+    component: ProfessionalComponent,
 }, {
-    path: 'profile/:id/hobbies', 
-    component: HobbiesComponent, 
+    path: 'profile/:id/hobbies',
+    component: HobbiesComponent,
 }, {
-    path: '', 
-    redirectTo: '/home', 
+    path: 'implicit/callback',
+    component: OktaCallbackComponent
+}, {
+    path: '',
+    redirectTo: '/home',
     pathMatch: 'full'
 }];
 

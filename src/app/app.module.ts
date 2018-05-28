@@ -16,6 +16,17 @@ import { ProfessionalProfileService } from './services/professional-profile.serv
 
 import { routesModule } from './app.routes';
 
+import {
+  OktaAuthModule,
+  OktaCallbackComponent,
+} from '@okta/okta-angular';
+
+const config = {
+  issuer: 'https://dev-893053.oktapreview.com/oauth2/default',
+  redirectUri: 'http://localhost:4200/implicit/callback',
+  clientId: '0oaf6kdbmzyhVIMF20h7'
+}
+
 @NgModule({
   declarations: [
     AppComponent, 
@@ -31,7 +42,8 @@ import { routesModule } from './app.routes';
     FlexLayoutModule, 
     MatButtonModule, 
     MDBBootstrapModule.forRoot(), 
-    routesModule
+    routesModule, 
+    OktaAuthModule.initAuth(config)
   ],
   providers: [ProfessionalProfileService],
   bootstrap: [AppComponent], 
